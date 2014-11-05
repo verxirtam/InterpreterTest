@@ -11,18 +11,18 @@ interface MessageContext
 
 interface MessageProcedure
 {
-	void parse(MessageContext context) throws Exception;
+	void process(MessageContext context) throws Exception;
 }
 
 class Message implements MessageProcedure
 {
 	@Override
-	public void parse(MessageContext context) throws Exception
+	public void process(MessageContext context) throws Exception
 	{
 		context.skipToken("MASSAGE_1.0");
 		context.skipReturn();
 		MessageBody mb=new MessageBody();
-		mb.parse(context);
+		mb.process(context);
 	}
 }
 
@@ -30,12 +30,12 @@ class MessageBody implements MessageProcedure
 {
 
 	@Override
-	public void parse(MessageContext context) throws Exception
+	public void process(MessageContext context) throws Exception
 	{
 		context.skipToken("EV3LineTracer_1.0");
 		context.skipReturn();
 		Command com=new Command();
-		com.parse(context);
+		com.process(context);
 	}
 	
 }
@@ -44,12 +44,12 @@ class Command implements MessageProcedure
 {
 
 	@Override
-	public void parse(MessageContext context) throws Exception
+	public void process(MessageContext context) throws Exception
 	{
 		String commandstring = context.nextToken();
 		context.skipReturn();
 		
-		createCommand(commandstring).parse(context);
+		createCommand(commandstring).process(context);
 		
 		
 	}
@@ -71,7 +71,7 @@ class CommandSetMDP implements MessageProcedure
 {
 
 	@Override
-	public void parse(MessageContext context) throws Exception
+	public void process(MessageContext context) throws Exception
 	{
 		//コマンド毎の処理を実装する
 		
@@ -82,7 +82,7 @@ class CommandExecEpisode implements MessageProcedure
 {
 
 	@Override
-	public void parse(MessageContext context) throws Exception
+	public void process(MessageContext context) throws Exception
 	{
 		//コマンド毎の処理を実装する
 	}
