@@ -11,12 +11,15 @@ MESSAGE_1.0			;メッセージ開始
 <MessageBody>:
 	<Version>			;バージョン
 	<Command>|<Result>	;コマンド|コマンドの結果
-	<Body>				;コマンドの内容
 ////////////////////////////////////////////////////////
 <Version>:
 	EV3LineTracer_1.0	;バージョン
 ////////////////////////////////////////////////////////
-<Command>:			;コマンド
+<Command>:
+	<CommandCategory>;コマンド種別
+	<Body>				;コマンドの内容
+////////////////////////////////////////////////////////
+<CommandCategory>:			;コマンド種別
 	SetMDP			;MDPを設定
 	|SetPolicy		;CurrentPolicyを設定
 	|ExecEpisode	;Episodeを実行
