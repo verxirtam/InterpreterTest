@@ -1,3 +1,65 @@
+
+<Message>::=<MessageVersion><endl> ;メッセージのバージョン
+				<MessageBody>;メッセージ本体
+				<endl>;空行
+
+<MessageVersion>::="MESSAGE_1.0"
+
+<MessageBody>::=<MessageBodyVersion><endl>;バージョン
+						<Command>|<Result><endl>;コマンド|コマンドの結果
+
+<Command>::=
+(
+	"SetMDP"<endl>;MDPを設定
+	<SetMDPBody><endl>;コマンドの内容
+	|
+	"SetPolicy"<endl>;MDPを設定
+	<SetPolicyBody><endl>;コマンドの内容
+	|
+	"ExecEpisode"<endl>;Episodeを実行
+)					
+
+<SetMDPBody>::=
+	<Interval><endl>;Interval(msec)
+	<StateCount><endl>;State数
+	<State>;Stateの定義
+	<Control>;Controlの定義(M=全てのStateの全てのControl数の合計)
+	<RegularPolicy>;RegularPolicyの定義
+
+<State>::=
+	N(<SingleState><endl>);Stateの定義 (StateIndexは0からN-1まで順に並ぶ(N=StateCount))
+
+<SingleState>::=
+	<StateIndex><tab>;StateIndex
+	<RefMax><tab>;RefMax
+	<ControlCount>;ControlCount
+
+<StateIndex>::=DIGIT
+<RefMax>::=DIGIT"."DIGIT
+<ControlCount>::=DIGIT
+
+<Control>::=
+	M(<SingleControl><endl>)
+		;(Controlの定義 StateIndexは0からN-1まで順に並ぶ(N=StateCount)
+		   ControlIndexは０からStateのControlCount-1まで順に並ぶ)
+
+<SingleControl>::=
+	<StateIndex><tab>;StateIndex
+	<ControlIndex><tab>;ControlIndex
+	<LMotorSpeed><tab>;LMotorSpeed
+	<RMotorSpeed>;RMotorSpeed
+
+<ControlIndex>::=DIGIT
+<LMotorSpeed>::=DIGIT
+<RMotorSpeed>::=DIGIT
+
+<RegularPolicy>::=
+	N(<SinglePolicy><endl>);RegularPolicyの定義(StateIndexは0からN-1まで順に並ぶ(N=StateCount))
+
+<SinglePolicy>::=
+	<StateIndex><tab>;StateIndex
+	<ControlIndex>;ControlIndex
+
 Messageのフォーマット
 行末の\t*;.*はコメント。使用時は在ってはならない
 //メッセージ全体/////////////////////////////////////////////
