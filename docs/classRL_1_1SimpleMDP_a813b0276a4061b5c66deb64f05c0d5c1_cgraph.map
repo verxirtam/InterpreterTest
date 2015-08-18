@@ -1,0 +1,4 @@
+<map id="RL::SimpleMDP::SetCurrentPolicy" name="RL::SimpleMDP::SetCurrentPolicy">
+<area shape="rect" id="node2" href="$classRL_1_1StochasticPolicy.html#a3338505d9656772059633139a1d00104" title="RL::StochasticPolicy\l::Verify" alt="" coords="243,5,389,46"/>
+<area shape="rect" id="node3" href="$classRL_1_1StochasticPolicy.html#a692d0b2c573865a8dc4d9d3b492531ba" title="RL::StochasticPolicy\l::GetStateCount" alt="" coords="438,5,583,46"/>
+</map>
