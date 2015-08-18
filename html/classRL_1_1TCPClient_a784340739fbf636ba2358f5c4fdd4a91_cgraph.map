@@ -1,0 +1,7 @@
+<map id="RL::TCPClient::connect" name="RL::TCPClient::connect">
+<area shape="rect" id="node2" href="$classRL_1_1TCPConnection.html#a93a1f4ee71cd4b2c314cadcea0b4381b" title="RL::TCPConnection::\lconnect" alt="" coords="254,5,402,46"/>
+<area shape="rect" id="node4" href="$classRL_1_1TCPStreamBuf.html#a5700a17c974a17f00fb07f318d7e13f0" title="RL::TCPStreamBuf::setBufferSize" alt="" coords="217,71,439,97"/>
+<area shape="rect" id="node3" href="$classRL_1_1TCPConnection.html#a657e8c17f79067e169e135c4b513a4ca" title="RL::TCPConnection::\lclose" alt="" coords="501,5,649,46"/>
+<area shape="rect" id="node5" href="$classRL_1_1TCPStreamBuf.html#a57fb905a70ae14e4d9c943ff04541bb2" title="RL::TCPStreamBuf::sync" alt="" coords="489,71,661,97"/>
+<area shape="rect" id="node6" href="$classRL_1_1TCPConnection.html#a3da4b90bbc991b3984355c77324efe54" title="RL::TCPConnection::\lwrite" alt="" coords="710,63,858,105"/>
+</map>
