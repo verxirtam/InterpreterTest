@@ -1,0 +1,5 @@
+<map id="RL::InputMessage_1_0::process" name="RL::InputMessage_1_0::process">
+<area shape="rect" id="node2" href="$classRL_1_1InputContext.html#a68af4d657db9686918f571d1f7e0193d" title="RL::InputContext::skipToken" alt="" coords="199,5,390,32"/>
+<area shape="rect" id="node3" href="$classRL_1_1InputContext.html#af406d55b68a82a8b72e44ce4bd8e418c" title="RL::InputContext::skipReturn" alt="" coords="198,56,391,83"/>
+<area shape="rect" id="node4" href="$classRL_1_1InputProcedure.html#ac049d0261d7732eebb1e8f27775a2321" title="RL::InputProcedure\l::process" alt="" coords="227,107,362,149"/>
+</map>

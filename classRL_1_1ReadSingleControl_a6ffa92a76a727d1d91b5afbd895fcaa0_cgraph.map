@@ -1,0 +1,5 @@
+<map id="RL::ReadSingleControl::ReadSingleControl" name="RL::ReadSingleControl::ReadSingleControl">
+<area shape="rect" id="node2" href="$classRL_1_1ReadSingleControl.html#a1ecfbbf8a2fc66d69afb345ac301fbae" title="RL::ReadSingleControl\l::setIndex" alt="" coords="211,38,367,79"/>
+<area shape="rect" id="node3" href="$classRL_1_1ReadSingleControl.html#a690edd127a054f3b64a5ea9e3ddc407d" title="RL::ReadSingleControl\l::setStateIndex" alt="" coords="417,5,573,46"/>
+<area shape="rect" id="node4" href="$classRL_1_1ReadSingleControl.html#aa84491ef2657c1339523896f470a4c91" title="RL::ReadSingleControl\l::setControlIndex" alt="" coords="417,70,573,111"/>
+</map>
